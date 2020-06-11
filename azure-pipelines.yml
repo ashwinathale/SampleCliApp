@@ -31,6 +31,7 @@ steps:
     command: build
     arguments: --no-restore --configuration $(buildConfiguration)
     projects: '**/*.csproj'
+    workingDirectory: 'SampleCLIApp'
 
 - task: DotNetCoreCLI@2
   displayName: 'Publish Artifacts'
@@ -39,11 +40,12 @@ steps:
    arguments: '--no-build --configuration $(buildConfiguration) --output $(build.artifactstagingdirectory)'
    zipAfterPublish: true
    publishWebProjects: true
-   #workingDirectory: 'SampleCliApp/wwwroot'
+   workingDirectory: 'SampleCLIApp'
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Build Artifacts'
   inputs: 
    ArtifactName: drop
    PathtoPublish: '$(build.artifactstagingdirectory)'
+   
 
