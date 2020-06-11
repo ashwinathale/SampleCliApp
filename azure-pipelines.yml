@@ -17,7 +17,7 @@ steps:
   displayName: 'Use .NET Core SDK 2.1'
   inputs:
      packageType: sdk
-     version: 2.1
+     version: 2.x
 
 - task: DotNetCoreCLI@2
   displayName: 'Restore Dependencies'
