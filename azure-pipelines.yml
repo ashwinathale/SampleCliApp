@@ -14,10 +14,10 @@ variables:
 
 steps:
 - task: UseDotNet@2
-  displayName: 'Use .NET Core SDK 2.1.0'
+  displayName: 'Use .NET Core SDK 2.1'
   inputs:
      packageType: sdk
-     version: 2.1.0
+     version: 2.1
 
 - task: DotNetCoreCLI@2
   displayName: 'Restore Dependencies'
