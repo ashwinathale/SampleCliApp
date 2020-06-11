@@ -17,7 +17,7 @@ steps:
   displayName: 'Use .NET Core SDK 2.1'
   inputs:
      packageType: sdk
-     version: 2.1.0-preview1-final
+     version: 2.1.2
      includePreviewVersions: true
 
 - task: Npm@1
