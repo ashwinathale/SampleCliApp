@@ -32,6 +32,7 @@ steps:
    arguments: '--no-build --configuration $(buildConfiguration) --output $(build.artifactstagingdirectory)'
    zipAfterPublish: true
    publishWebProjects: true
+   workingDirectory: 'SampleCliApp/'
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Build Artifacts'
