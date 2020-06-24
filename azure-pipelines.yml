@@ -42,7 +42,7 @@ steps:
   inputs:
    command: publish
    arguments: '--no-build --configuration $(buildConfiguration) --output $(build.artifactstagingdirectory)'
-   zipAfterPublish: true
+   zipAfterPublish: false
    publishWebProjects: false
    #workingDirectory: 'SampleCLIApp'
 
